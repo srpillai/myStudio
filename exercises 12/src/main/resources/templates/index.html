@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Enumerable Planets</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<h1>Planets!</h1>
+<table th:each="planet : ${planets}" class="table table-striped">
+    <thead >
+        <tr>
+            <th th:text="${planet.name}">
+            </th>
+        </tr>
+    </thead>
+    <tr>
+        <td th:text="${planet.yearLength} + ' Earth days in one year.'"></td>
+    </tr>
+</table>
+
+
+</body>
+</html>
